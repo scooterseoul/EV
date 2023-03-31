@@ -17,6 +17,10 @@ const AllCars = () => {
     fetchData();
   }, []);
 
+  function convert(mi) {
+    return Math.round(mi * 1.6);
+  }
+
   if (isLoading) {
     return <p>Loading...</p>;
   }
@@ -29,12 +33,20 @@ const AllCars = () => {
             <li key={car.id}>
               <Link to={"/cars/" + car.id}>
                 <div>
-                  <img src={car.image_url} alt={car.name} />
+                  <img
+                    src={car.image_url}
+                    alt={car.name}
+                    className={styles.carphoto}
+                  />
                 </div>
               </Link>
               <div>{car.maker}</div>
               <div>{car.name}</div>
-              <div>{car.range} mi</div>
+              <div>
+                Range:
+                {car.range} mi / {convert(car.range)}km
+              </div>
+
               <div>{car.price}</div>
               <div>{car.country}</div>
               <div>{car.chargespeed}kw</div>
