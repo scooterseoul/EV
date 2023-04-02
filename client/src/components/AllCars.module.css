@@ -1,11 +1,11 @@
-li {
+.listitem {
   list-style-type: none;
   background-color: white;
 }
 .mainCont {
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   gap: 0.5rem;
   padding-left: 0;

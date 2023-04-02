@@ -1,16 +1,14 @@
-import styles from "./AllCars.module.css";
+import styles from "./HeroCar.module.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Header from "./Header";
-import HeroCar from "./HeroCar";
 
-const AllCars = () => {
+const HeroCar = () => {
   const [cars, setCars] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/api/cars");
+      const response = await fetch("http://localhost:5000/api/cars/37");
 
       const data = await response.json();
       setCars(data);
@@ -29,8 +27,6 @@ const AllCars = () => {
 
   return (
     <>
-      <Header />
-      <HeroCar />
       <ul className={styles.mainCont}>
         {cars.map((car) => {
           return (
@@ -51,12 +47,12 @@ const AllCars = () => {
                 {car.range} mi / {convert(car.range)}km
               </div>
 
-              <div>{car.price}</div>
+              {/* <div>{car.price}</div>
               <div>{car.country}</div>
               <div>{car.chargespeed}kw</div>
               <div>{car.year}</div>
-              <div>{car.firstyear}</div>
-              <Link to={car.url}>Go</Link>
+              <div>{car.firstyear}</div> */}
+              {/* <Link to={car.url}>Go</Link> */}
             </li>
           );
         })}
@@ -66,4 +62,4 @@ const AllCars = () => {
   );
 };
 
-export default AllCars;
+export default HeroCar;
