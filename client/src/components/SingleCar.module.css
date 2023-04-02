@@ -1,0 +1,75 @@
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  background-color: black;
+  padding-bottom: 0.1rem;
+}
+.logo {
+  width: 10rem;
+  grid-column: 1/2;
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  /* padding-bottom: 5rem; */
+}
+.mailCont {
+  grid-column: 2/3;
+  text-align: right;
+  padding-right: 0.3rem;
+  padding-top: 0.5rem;
+}
+.mail {
+  width: 1.5rem;
+}
+/* .prodCont {
+  padding-left: 0;
+} */
+.listCont1 {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.photos {
+  width: 100%;
+}
+.makerlogoCont {
+  text-align: center;
+}
+.makerlogo {
+  max-height: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.name {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  padding-top: 1rem;
+}
+.statCont {
+  /* padding-top: 2rem; */
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.description {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+.seemoreCont {
+  text-align: right;
+  padding-right: 1rem;
+}
+.bottomCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 1rem;
+}
+.makerurl {
+  text-decoration: none;
+}
+.backbtn {
+  width: 2rem;
+  padding-left: 0.5rem;
+}
