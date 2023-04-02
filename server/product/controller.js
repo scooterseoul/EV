@@ -28,6 +28,8 @@ const addCar = (req, res) => {
     firstyear,
     url,
     image_url,
+    description,
+    makerlogo,
   } = req.body;
   //check if car name exist
   pool.query(queries.checkCarName, [name], (error, results) => {
@@ -48,6 +50,8 @@ const addCar = (req, res) => {
         firstyear,
         url,
         image_url,
+        description,
+        makerlogo,
       ],
       (error, results) => {
         if (error) throw error;
@@ -85,6 +89,8 @@ const updateCar = (req, res) => {
     firstyear,
     url,
     image_url,
+    description,
+    makerlogo,
   } = req.body;
   pool.query(queries.getCarById, [id], (error, results) => {
     const noCarFound = !results.rows.length;
@@ -104,6 +110,8 @@ const updateCar = (req, res) => {
         firstyear,
         url,
         image_url,
+        description,
+        makerlogo,
         id,
       ],
       (error, results) => {
