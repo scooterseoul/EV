@@ -1,0 +1,28 @@
+.header {
+  /* height: 50vh; */
+  background-color: black;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  background-color: black;
+}
+.logo {
+  width: 10rem;
+  grid-column: 1/2;
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  /* padding-bottom: 5rem; */
+}
+.mailCont {
+  grid-column: 2/3;
+  text-align: right;
+  padding-right: 0.3rem;
+  padding-top: 0.3rem;
+}
+.mail {
+  width: 1.5rem;
+}
+.headerimg {
+  width: 100%;
+}
