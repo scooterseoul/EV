@@ -27,12 +27,12 @@ const AllCars = () => {
 
   return (
     <>
-      <ul>
+      <ul className={styles.mainCont}>
         {cars.map((car) => {
           return (
             <li key={car.id}>
               <Link to={"/cars/" + car.id}>
-                <div>
+                <div className={styles.carCont}>
                   <img
                     src={car.image_url}
                     alt={car.name}
