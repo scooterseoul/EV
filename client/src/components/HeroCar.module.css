@@ -1,0 +1,10 @@
+.mainCont {
+  list-style-type: none;
+  background-color: white;
+  text-align: center;
+  padding-left: 0;
+}
+.carphoto {
+  width: 15rem;
+  margin: 0 auto;
+}

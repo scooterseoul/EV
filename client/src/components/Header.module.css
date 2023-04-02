@@ -1,11 +1,8 @@
-.header {
-  /* height: 50vh; */
-  background-color: black;
-}
 .navbar {
   display: grid;
   grid-template-columns: repeat(3 1fr);
   background-color: black;
+  padding-bottom: 0.1rem;
 }
 .logo {
   width: 10rem;
@@ -25,4 +22,5 @@
 }
 .headerimg {
   width: 100%;
+  padding-bottom: 0;
 }
