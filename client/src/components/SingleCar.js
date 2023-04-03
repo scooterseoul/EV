@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Backbtn from "../images/icons8-back-arrow-96gray.png";
 import styles from "./SingleCar.module.css";
 import logo from "../images/logo2.png";
@@ -10,20 +10,6 @@ const SingleCar = () => {
   const [car, setCar] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isNotFound, setIsNotFound] = useState(false);
-  const [maker, setMaker] = useState("");
-  const [name, setName] = useState("");
-  const [range, setRange] = useState();
-  const [price, setPrice] = useState();
-  const [country, setCountry] = useState("");
-  const [chargespeed, setChargespeed] = useState();
-  const [year, setYear] = useState();
-  const [firstyear, setFirstyear] = useState();
-  const [url, setUrl] = useState("");
-  const [image_url, setImage_url] = useState("");
-  const [description, setDescription] = useState("");
-  const [makerlogo, setMakerlogo] = useState("");
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,36 +20,11 @@ const SingleCar = () => {
       }
       const data = await fetchUrl.json();
       setCar(data);
-      setMaker(data[0].maker);
-      setName(data[0].name);
-      setRange(data[0].range);
-      setPrice(data[0].price);
-      setCountry(data[0].country);
-      setChargespeed(data[0].chargespeed);
-      setYear(data[0].year);
-      setFirstyear(data[0].firstyear);
-      setUrl(data[0].url);
-      setImage_url(data[0].image_url);
-      setDescription(data[0].description);
-      setMakerlogo(data[0].makerlogo);
       setIsLoading(false);
     };
 
     fetchData();
   }, [id]);
-
-  // function selectProduct(id) {
-  //   let item = product[id - 1];
-  //   setName(item.name);
-  //   setPrice(item.price);
-  //   setCountry(item.country);
-  //   setImage_url(item.image_url);
-  //   setUrl_add(item.url_add);
-  // }
-
-  function refresh() {
-    window.location.reload(false);
-  }
 
   if (isNotFound) {
     return (
@@ -75,9 +36,6 @@ const SingleCar = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  // const renderOnClickRight = (event) => {
-  //   setUrl_add(url_add);
-  // };
 
   function convert(mi) {
     return Math.round(mi * 1.6);
@@ -88,12 +46,13 @@ const SingleCar = () => {
       <div className={styles.navbar}>
         <Link to="/">
           {" "}
-          <img src={logo} className={styles.logo} />
+          <img src={logo} className={styles.logo} alt="logo" />
         </Link>
         <div className={styles.mailCont}>
           <img
             src={mail}
             className={styles.mail}
+            alt="email"
             onClick={() => (window.location = "mailto: scooterseoul@gmail.com")}
           />
         </div>
@@ -118,7 +77,11 @@ const SingleCar = () => {
                     </div>
 
                     <div className={styles.makerlogoCont}>
-                      <img src={item.makerlogo} className={styles.makerlogo} />
+                      <img
+                        src={item.makerlogo}
+                        className={styles.makerlogo}
+                        alt={item.maker}
+                      />
                     </div>
 
                     <div className={styles.statCont}>

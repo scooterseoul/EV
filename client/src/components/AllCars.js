@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import HeroCar from "./HeroCar";
+import MakeSelector from "./MakeSelector";
 
 const AllCars = () => {
   const [cars, setCars] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filteredCars, setFilteredCars] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,6 +17,7 @@ const AllCars = () => {
       const data = await response.json();
       setCars(data);
       setIsLoading(false);
+      setFilteredCars(data);
     };
     fetchData();
   }, []);
@@ -31,8 +34,11 @@ const AllCars = () => {
     <>
       <Header />
       <HeroCar />
+      <div>
+        <MakeSelector cars={cars} setFilteredCars={setFilteredCars} />
+      </div>
       <ul className={styles.mainCont}>
-        {cars.map((car) => {
+        {filteredCars.map((car) => {
           return (
             <li key={car.id} className={styles.listitem}>
               <Link to={"/cars/" + car.id}>
@@ -44,19 +50,13 @@ const AllCars = () => {
                   />
                 </div>
               </Link>
-              <div>{car.maker}</div>
-              <div>{car.name}</div>
-              <div>
-                Range:
-                {car.range} mi / {convert(car.range)}km
+              <div className={styles.maker}>
+                {car.year} {car.maker} {car.name}{" "}
+                <div className={styles.range}>
+                  Range: {car.range} mi / {convert(car.range)}km
+                </div>
+                <div className={styles.price}>{car.price}</div>
               </div>
-
-              <div>{car.price}</div>
-              <div>{car.country}</div>
-              <div>{car.chargespeed}kw</div>
-              <div>{car.year}</div>
-              <div>{car.firstyear}</div>
-              <Link to={car.url}>Go</Link>
             </li>
           );
         })}

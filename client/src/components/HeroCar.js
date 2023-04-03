@@ -27,6 +27,9 @@ const HeroCar = () => {
 
   return (
     <>
+      <div className={styles.head}>
+        2023 Hyundai Ionic 5: Over 300 mi Range ...toooo cool!
+      </div>
       <ul className={styles.mainCont}>
         {cars.map((car) => {
           return (
@@ -40,19 +43,22 @@ const HeroCar = () => {
                   />
                 </div>
               </Link>
-              <div>{car.maker}</div>
-              <div>{car.name}</div>
-              <div>
-                Range:
-                {car.range} mi / {convert(car.range)}km
+              <div className={styles.infoCont}>
+                <div className={styles.maker}>
+                  <img
+                    src={car.makerlogo}
+                    className={styles.makerlogo}
+                    alt="makerlogo"
+                  />
+                </div>
+                <div>
+                  <div className={styles.name}>{car.name} </div>Range:
+                  {car.range} mi / {convert(car.range)}km
+                </div>
+                <div className={styles.carndriver}>
+                  "The Hyundai Ioniq 5 Is the 2023 MotorTrend SUV of the Year"
+                </div>
               </div>
-
-              {/* <div>{car.price}</div>
-              <div>{car.country}</div>
-              <div>{car.chargespeed}kw</div>
-              <div>{car.year}</div>
-              <div>{car.firstyear}</div> */}
-              {/* <Link to={car.url}>Go</Link> */}
             </li>
           );
         })}

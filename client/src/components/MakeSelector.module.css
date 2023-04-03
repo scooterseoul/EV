@@ -1,0 +1,10 @@
+.dropCont {
+  padding: 1.3rem;
+}
+.select {
+  background-color: #545454;
+  color: #fff;
+  /* border-radius: 0.2rem; */
+  border-width: 0.2rem;
+  font-size: 1rem;
+}
