@@ -2,7 +2,9 @@
 
 <div>
 
-<img width=50% alt="sample" src="/client/src/images/Mock-sample.png">
+<!-- <img width=50% alt="sample" src="/client/src/images/Mock-sample.png"> -->
+
+![img](./client/src/images/Mock-sample%20Medium.png)
 
 </div>
 
@@ -13,10 +15,10 @@ A PERN stack application for users to view an array of Electric Vehicles.
 ### Demo:
 
 <div>
-<img width=15% alt="sample" src="/client/src/images/M1-mock.png">
-<img width=15% alt="sample" src="/client/src/images/M2-mock.png">
-<img width=15% alt="sample" src="/client/src/images/M3-mock.png">
-<img width=15% alt="sample" src="/client/src/images/M4-mock.png">
+<img width=15% alt="sample" src="/client/src/images/M1-mock%20Large.png">
+<img width=15% alt="sample" src="/client/src/images/M2-mock%20Large.png>
+<img width=15% alt="sample" src="/client/src/images/M3-mock%20Large.png">
+<img width=15% alt="sample" src="/client/src/images/M4-mock%20Large.png">
 
 ### Features
 
