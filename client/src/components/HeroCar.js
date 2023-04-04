@@ -8,7 +8,9 @@ const HeroCar = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/api/cars/56");
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/api/cars/56`
+      );
 
       const data = await response.json();
       setCars(data);
