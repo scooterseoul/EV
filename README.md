@@ -2,7 +2,7 @@
 
 <div>
 
-![img](./client/src/images/Mock-sample.png)
+<img width=50% alt="sample" src="/client/src/images/Mock-sample.png">
 
 </div>
 
@@ -10,7 +10,7 @@
 
 A PERN stack application for users to view an array of Electric Vehicles.
 
-### Demo: https://ay-choc-front.onrender.com/
+### Demo:
 
 <div>
 <img width=15% alt="sample" src="/client/src/images/M1-mock.png">
