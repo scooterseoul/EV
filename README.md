@@ -2,7 +2,7 @@
 
 <div>
 
-<img width=15% alt="sample" src="/client/src/images/Mock-sample.png">
+<img width=50% alt="sample" src="/client/src/images/Mock-sample.png">
 
 </div>
 
