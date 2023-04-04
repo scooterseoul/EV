@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import HeroCar from "./HeroCar";
 import MakeSelector from "./MakeSelector";
+import Footer from "./Footer";
 
 const AllCars = () => {
   const [cars, setCars] = useState([]);
@@ -32,36 +33,50 @@ const AllCars = () => {
 
   return (
     <>
-      <Header />
-      <HeroCar />
       <div>
-        <MakeSelector cars={cars} setFilteredCars={setFilteredCars} />
+        <Header />
+        <HeroCar />
+        <div className={styles.favorites}>Electric Cars</div>
+        <div className={styles.toptext}>
+          Favorite Electric Vehicles for 2023 and 2024
+        </div>
+        <div>
+          <MakeSelector cars={cars} setFilteredCars={setFilteredCars} />
+        </div>
+
+        <ul className={styles.mainCont}>
+          {filteredCars.map((car) => {
+            return (
+              <li key={car.id} className={styles.listitem}>
+                <Link to={"/cars/" + car.id}>
+                  <div className={styles.carCont}>
+                    <img
+                      src={car.image_url}
+                      alt={car.name}
+                      className={styles.carphoto}
+                    />
+                  </div>
+                </Link>
+                <div className={styles.maker}>
+                  {car.year} {car.maker} {car.name}{" "}
+                  <div className={styles.range}>
+                    Range: <strong>{car.range}</strong>mi /{" "}
+                    <strong>{convert(car.range)}</strong>
+                    km
+                  </div>
+                  <div className={styles.price}>
+                    MSRP <strong>{car.price}</strong>
+                  </div>
+                </div>
+                <div className={styles.lite_description}>
+                  {car.lite_description}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        <Footer />
       </div>
-      <ul className={styles.mainCont}>
-        {filteredCars.map((car) => {
-          return (
-            <li key={car.id} className={styles.listitem}>
-              <Link to={"/cars/" + car.id}>
-                <div className={styles.carCont}>
-                  <img
-                    src={car.image_url}
-                    alt={car.name}
-                    className={styles.carphoto}
-                  />
-                </div>
-              </Link>
-              <div className={styles.maker}>
-                {car.year} {car.maker} {car.name}{" "}
-                <div className={styles.range}>
-                  Range: {car.range} mi / {convert(car.range)}km
-                </div>
-                <div className={styles.price}>{car.price}</div>
-              </div>
-            </li>
-          );
-        })}
-        <li></li>
-      </ul>
     </>
   );
 };

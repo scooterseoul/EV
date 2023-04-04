@@ -1,10 +1,15 @@
 .dropCont {
-  padding: 1.3rem;
+  padding-left: 0.8rem;
+  padding-top: 1.3rem;
 }
 .select {
-  background-color: #545454;
-  color: #fff;
-  /* border-radius: 0.2rem; */
-  border-width: 0.2rem;
+  background-color: white;
+  color: #180909;
+  border-width: 0.1rem;
   font-size: 1rem;
+}
+@media only screen and (min-width: 46rem) {
+  .dropCont {
+    padding-bottom: 2rem;
+  }
 }

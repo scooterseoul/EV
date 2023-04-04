@@ -8,11 +8,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div>
         <ul className={styles.footerNav}>
-          <li>
-            <Link to="/" className={styles.footerTitle}>
-              EVolution
-            </Link>
-          </li>
+          <li className={styles.footerTitle}>EVolution</li>
           <li
             className={styles.email}
             onClick={() => (window.location = "mailto: scooterseoul@gmail.com")}
