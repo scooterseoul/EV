@@ -16,15 +16,26 @@
   padding-left: 0;
   margin-top: 0;
   padding-bottom: 2rem;
-  border-bottom-width: 0.08rem;
-  border-bottom-color: rgb(199, 202, 202);
-  border-bottom-style: solid;
+}
+.number1 {
+  color: rgb(254, 253, 255);
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgb(223, 142, 21);
+  width: 3rem;
+  padding-bottom: 0.2rem;
+  position: absolute;
+  font-style: italic;
+  border-radius: 0 0 0.2rem 0.2rem;
+  margin-left: 1rem;
+  box-shadow: 0.25rem 0.2rem 0.4rem 0 rgb(57, 55, 55);
 }
 .carphoto {
   width: 100%;
   margin: 0 auto;
   background-color: black;
 }
+
 .infoCont {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -43,4 +54,43 @@
   padding-top: 1.2rem;
   grid-column: 1/-1;
   font-style: italic;
+}
+@media only screen and (min-width: 46rem) {
+  .mainCont {
+    padding-top: 2rem;
+    margin: 0;
+  }
+  .listitem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .number1 {
+    margin-top: 2rem;
+    width: 5rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0 0.2rem 0.2rem 0;
+    margin-left: 0;
+  }
+  .linkCont {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .infoCont {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    width: 90%;
+    justify-self: center;
+    padding-top: 0;
+  }
+
+  .makerlogo {
+    width: 4rem;
+  }
+  .name {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }

@@ -2,6 +2,7 @@
   width: 100%;
   background: rgb(84, 84, 84);
   height: 2rem;
+  top: 100%;
 }
 .footerNav {
   display: grid;
@@ -13,10 +14,7 @@
   padding-top: 0.2rem;
   list-style-type: none;
 }
-a:visited {
-  text-decoration: none;
-  color: white;
-}
+
 .footerTitle {
   text-align: center;
   text-decoration: none;

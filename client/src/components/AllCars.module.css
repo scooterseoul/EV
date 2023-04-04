@@ -1,3 +1,10 @@
+.mainCont {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+}
 .listitem {
   list-style-type: none;
   background-color: white;
@@ -12,32 +19,92 @@
   border-bottom-color: rgb(199, 202, 202);
   border-bottom-style: solid;
 }
-.mainCont {
-  width: 90%;
-  list-style-type: none;
-  padding-left: 0;
-  text-align: center;
-  margin: 0 auto;
+
+.favorites {
+  font-size: 1rem;
+  background-color: rgb(72, 71, 71);
+  color: white;
+  padding-top: 0.3rem;
+  padding-left: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+.toptext {
+  font-size: 1.8rem;
+  width: 60%;
+  color: rgb(60, 59, 59);
+  padding: 0.8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .carCont {
   width: 90%;
-  margin: 0 auto;
   padding-top: 0.3rem;
 }
 .carphoto {
-  max-width: 100%;
+  max-height: 15rem;
+  width: 100%;
 }
 .maker {
   font-weight: bold;
+  font-size: 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+  color: rgb(44, 76, 121);
+  text-align: left;
 }
 .range {
+  padding-top: 0.2rem;
   font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
 }
 .price {
+  padding-top: 0.2rem;
   font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+}
+.lite_description {
+  grid-column: 1/-1;
+  padding-top: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 46rem) {
+  .mainCont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: none;
+    gap: 1.5rem;
+  }
+
+  .listitem {
+    margin-bottom: 0;
+  }
+  .toptext {
+    font-size: 3rem;
+    width: 50%;
+    margin-top: 1rem;
+  }
+  .carCont {
+    width: 100%;
+    align-self: center;
+    padding-top: 0;
+  }
+  .maker {
+    text-align: left;
+    padding-left: 1rem;
+  }
+  .range {
+    font-size: 0.8rem;
+  }
+  .price {
+    font-size: 0.8rem;
+  }
+  .lite_description {
+    font-size: 0.8rem;
+    width: 75%;
+  }
 }
