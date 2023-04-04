@@ -93,7 +93,7 @@ const SingleCar = () => {
                         Range: {item.range} mi / {convert(item.range)}km
                       </div>
                       <div>Max charging: {item.chargespeed}kw</div>
-                      <div>First built: {item.firstyear}</div>
+                      <div>Introduced: {item.firstyear}</div>
                     </div>
                     <div className={styles.description}>{item.description}</div>
                   </div>

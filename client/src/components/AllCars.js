@@ -58,7 +58,9 @@ const AllCars = () => {
                   </div>
                 </Link>
                 <div className={styles.maker}>
-                  {car.year} {car.maker} {car.name}{" "}
+                  <Link to={"/cars/" + car.id} className={styles.makeName}>
+                    {car.year} {car.maker} {car.name}{" "}
+                  </Link>
                   <div className={styles.range}>
                     Range: <strong>{car.range}</strong>mi /{" "}
                     <strong>{convert(car.range)}</strong>
