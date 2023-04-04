@@ -13,7 +13,9 @@ const SingleCar = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const fetchUrl = await fetch(`http://localhost:5000/api/cars/${id}`);
+      const fetchUrl = await fetch(
+        `${process.env.REACT_APP_API_URL}/api/cars/${id}`
+      );
       if (fetchUrl.ok === false) {
         setIsNotFound(true);
         return;

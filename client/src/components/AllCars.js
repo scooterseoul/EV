@@ -13,7 +13,7 @@ const AllCars = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/api/cars");
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/cars`);
 
       const data = await response.json();
       setCars(data);
