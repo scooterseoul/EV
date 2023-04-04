@@ -15,10 +15,10 @@ A PERN stack application for users to view an array of Electric Vehicles.
 ### Demo:
 
 <div>
-<img width=15% alt="sample" src="/client/src/images/M1-mockMedium.png.png">
-<img width=15% alt="sample" src="/client/src/images/M2-mockMedium.png.png">
-<img width=15% alt="sample" src="/client/src/images/M3-mockMedium.png.png">
-<img width=15% alt="sample" src="/client/src/images/M4-mockMedium.png.png">
+<img width=15% alt="sample" src="/client/src/images/M1-mockMedium.png">
+<img width=15% alt="sample" src="/client/src/images/M2-mockMedium.png">
+<img width=15% alt="sample" src="/client/src/images/M3-mockMedium.png">
+<img width=15% alt="sample" src="/client/src/images/M4-mockMedium.png">
 </div>
 
 ### Features
