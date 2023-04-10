@@ -5,8 +5,12 @@ name VARCHAR(255),
 range INT,
 price MONEY,
 country VARCHAR(255),
-maxchargingspeed INT,
+chargespeed INT,
 year INT,
-firstyearmade INT,
+firstyear INT,
 url VARCHAR(255),
-image_url VARCHAR(255));
+image_url VARCHAR(255),
+description VARCHAR,
+makerlogo VARCHAR(255),
+lite_description VARCHAR(255)
+);
