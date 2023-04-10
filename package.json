@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "auto": "npx nodemon ./server/server.js"
+    "auto": "npx nodemon ./server/server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
