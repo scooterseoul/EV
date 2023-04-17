@@ -28,7 +28,12 @@ const AllCars = () => {
   }
 
   if (isLoading) {
-    return <p>Cranking up the database... Just a moment</p>;
+    return (
+      <p>
+        <br />
+        Cranking up the database... Just a moment
+      </p>
+    );
   }
 
   return (
