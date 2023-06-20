@@ -12,7 +12,7 @@
 
 A PERN stack application for users to view an array of Electric Vehicles.
 
-### Demo: https://ev-front.onrender.com/
+<!---### Demo: https://ev-front.onrender.com/--->
 
 <div>
 <img width=15% alt="sample" src="/client/src/images/M1-mockMedium.png">
