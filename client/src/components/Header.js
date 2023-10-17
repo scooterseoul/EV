@@ -25,7 +25,7 @@ const Header = () => {
         </video>
         <div className={styles.overlay}>
           <h1 className={styles.overlayText}>
-            Are <strong>YOU</strong> ready to go <strong>ELECTRIC?</strong>
+            Are you ready to <strong>GO ELECTRIC?</strong>
           </h1>{" "}
         </div>
       </div>
