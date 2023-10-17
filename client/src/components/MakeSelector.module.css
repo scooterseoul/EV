@@ -3,10 +3,12 @@
   padding-top: 1.3rem;
 }
 .select {
-  background-color: white;
-  color: #180909;
-  border-width: 0.1rem;
+  background-color: rgb(72, 71, 71);
+  color: white;
+  border: none;
+  /* border-width: 0.1rem; */
   font-size: 1rem;
+  padding: 0.2rem;
 }
 @media only screen and (min-width: 46rem) {
   .dropCont {
