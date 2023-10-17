@@ -1,32 +1,101 @@
 .header {
-  background-color: rgb(255, 252, 252);
+  background-color: rgb(55, 54, 54);
 }
 .navbar {
   display: grid;
   grid-template-columns: repeat(3 1fr);
   background-color: black;
-  /* padding-bottom: 0.1rem; */
   padding: 0.4rem;
-  position: sticky;
-  z-index: 1;
-  top: 0;
 }
 .logo {
-  width: 8rem;
+  width: 5rem;
   grid-column: 1/2;
   padding-left: 0.3rem;
   padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 .mailCont {
   grid-column: 2/3;
   text-align: right;
   padding-right: 0.3rem;
-  padding-top: 0.3rem;
+  align-self: center;
 }
 .mail {
-  width: 1.5rem;
+  width: 1rem;
 }
-.headerimg {
+.headerCont {
+  position: relative;
+  background: rgb(55, 54, 54);
+}
+.headerVideo {
   width: 100%;
   padding-bottom: 0;
+}
+.overlay {
+  background-color: rgb(67, 64, 64, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.overlayText {
+  font-size: 1rem;
+  position: absolute;
+  height: 75%;
+  width: 70%;
+  top: 8%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  text-align: right;
+  grid-column: 2/4;
+  grid-row: 1/3;
+  padding-top: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.overlayText strong {
+  font-size: 1.2rem;
+  color: rgb(84, 191, 84);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@media only screen and (min-width: 46rem) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .navbar {
+    grid-column: 1/-1;
+  }
+
+  .headerCont {
+    grid-column: 1/-1;
+    overflow: hidden;
+    height: 15rem;
+  }
+  /* .overlay {
+    background-color: rgb(67, 64, 64, 0.5);
+  } */
+  .overlayText {
+    grid-row: 1/3;
+    display: inline;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    position: relative;
+    height: 100%;
+    width: 40%;
+    top: 20%;
+    left: 25%;
+    padding-top: 0;
+  }
+  .overlayText strong {
+    font-size: 3rem;
+    color: rgb(0, 183, 91);
+  }
 }

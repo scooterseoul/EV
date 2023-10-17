@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
-import headerimg from "../images/headerBannerGray.png";
+import headerVideo from "../images/road_traffic_-_116172 (720p).mp4";
 import mail from "../images/icons8-secured-letter-64.png";
 import logo from "../images/logo2.png";
 
@@ -18,7 +18,17 @@ const Header = () => {
           />
         </div>
       </div>
-      <img src={headerimg} className={styles.headerimg} alt="banner" />
+      <div className={styles.headerCont}>
+        <video autoPlay loop muted className={styles.headerVideo}>
+          <source src={headerVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.overlay}>
+          <h1 className={styles.overlayText}>
+            Are <strong>YOU</strong> ready to go <strong>ELECTRIC?</strong>
+          </h1>{" "}
+        </div>
+      </div>
     </div>
   );
 };

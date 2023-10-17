@@ -31,7 +31,8 @@ const HeroCar = () => {
     <>
       <div className={styles.bigCont}>
         <div className={styles.head}>
-          ...2023 Hyundai Ionic 5: Over 300 mi Range ...toooo cool!
+          ...2023 Hyundai Ioniq 5: <strong>Over 300 mi Range</strong> ...toooo
+          cool!
         </div>
         <div className={styles.number1}>#1</div>
         <ul className={styles.mainCont}>

@@ -43,7 +43,7 @@ const AllCars = () => {
         <HeroCar />
         <div className={styles.favorites}>Electric Cars</div>
         <div className={styles.toptext}>
-          Favorite Electric Vehicles for 2023 and 2024
+          Favorite Electric Vehicles for 2023 / 2024
         </div>
         <div>
           <MakeSelector cars={cars} setFilteredCars={setFilteredCars} />
