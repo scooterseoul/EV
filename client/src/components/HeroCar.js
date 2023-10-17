@@ -57,8 +57,10 @@ const HeroCar = () => {
                     />
                   </div>
                   <div>
-                    <div className={styles.name}>{car.name} </div>Range:{" "}
-                    {car.range}mi / {convert(car.range)}km
+                    <div className={styles.name}>{car.name} </div>
+                    <div className={styles.range}>
+                      Range: {car.range}mi / {convert(car.range)}km
+                    </div>
                   </div>
                   <div className={styles.carndriver}>
                     "The Hyundai Ioniq 5 Is the 2023 MotorTrend SUV of the Year"
