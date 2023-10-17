@@ -11,6 +11,13 @@ const AllCars = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [filteredCars, setFilteredCars] = useState([]);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/cars`);
@@ -82,6 +89,11 @@ const AllCars = () => {
             );
           })}
         </ul>
+        <div className={styles.buttonToTop}>
+          <button className={styles.backToTopButton} onClick={scrollToTop}>
+            Back to Top
+          </button>
+        </div>
         <Footer />
       </div>
     </>
